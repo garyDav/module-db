@@ -11,9 +11,9 @@ async function setup() {
     dbName = 'module-db',
   } = config
 
+  //console.log(mongodb_uri, dbUser, dbPassword, dbHost, dbPort, dbName)
   const db = new MongoDB({ dbUser, dbPassword, dbHost, dbPort, dbName })
   await db.connect()
-  //console.log(mongodb_uri, dbUser, dbPassword, dbHost, dbPort, dbName, dbAuth)
 }
 
 setup()
