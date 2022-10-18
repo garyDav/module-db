@@ -1,7 +1,7 @@
 # Module DB
 
 ```js
-//import MongoDB, { AgentServiceDB, MetricServiceDB, UserServiceDB, UserModel, RoleModel, ROLES } from 'dbosco-db'
+//import MongoDB, { UserModel, RoleModel, ROLES } from 'dbosco-db'
 import MongoDB from './server/index.js'
 import config from './server/config/index.js'
 
@@ -12,10 +12,9 @@ async function setup() {
     dbHost = 'localhost',
     dbPort = 27017,
     dbName = 'module-db',
-    dbAuth = 'module-db',
   } = config
 
-  const db = new MongoDB({ dbUser, dbPassword, dbHost, dbPort, dbName, dbAuth })
+  const db = new MongoDB({ dbUser, dbPassword, dbHost, dbPort, dbName })
   await db.connect()
 }
 
