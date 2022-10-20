@@ -6,6 +6,7 @@ const materiaSchema = new Schema(
   {
     nombre: String,
     sigla: String,
+    estado: String,
   },
   {
     versionKey: false,

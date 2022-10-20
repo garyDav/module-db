@@ -5,7 +5,17 @@ const { Schema, model } = mongoose
 const simulacroAreaSchema = new Schema(
   {
     nombre: String,
-    sigla: String,
+    descripcion: String,
+    porcentaje_area: Number,
+    simulacro_examen: [
+      {
+        id: {
+          type: Schema.Types.ObjectId,
+          ref: 'SimulacroExamen',
+        },
+        porcentaje_examen: Number,
+      },
+    ],
   },
   {
     versionKey: false,
