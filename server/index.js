@@ -3,7 +3,7 @@ import Debug from 'debug'
 import config from './config/index.js'
 
 class MongoDB {
-  debug = Debug('module-db:server')
+  debug = Debug('db:server')
   mongodb_uri = null
   db = null
 
@@ -37,3 +37,6 @@ class MongoDB {
 }
 
 export default MongoDB
+export { ROLES } from './models/role.model.js'
+export { default as RoleServiceDB } from './services/role.service.js'
+export { default as UserServiceDB } from './services/user.service.js'

@@ -2,11 +2,12 @@ import Debug from 'debug'
 import bcrypt from 'bcryptjs'
 import { UserModel, RoleModel } from '../models/index.js'
 
-const debug = Debug('dbosco-db:User')
+const debug = Debug('module-db:User')
 
 class UserServiceDB {
   async register(user, roles) {
-    debug('Register User with Roles\n')
+    if (roles.length > 0) debug('Register User with Roles\n')
+    else debug('Register User none Roles\n')
     // Creating a new User Object
     const newUser = new UserModel(user)
 
@@ -34,6 +35,20 @@ class UserServiceDB {
 
     // saving the new user
     return newUser.save()
+  }
+
+  findById(id) {
+    debug('Find By Id User\n')
+
+    const columns = { password: 0 }
+    return UserModel.findById(id, columns)
+  }
+
+  findByUsername(username) {
+    debug('Find By Username User\n')
+
+    const query = { username }
+    return UserModel.findOne(query).populate('roles')
   }
 
   findByEmail(email) {
