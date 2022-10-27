@@ -7,10 +7,12 @@ const simulacroExamenSchema = new Schema(
     materia: {
       type: Schema.Types.ObjectId,
       ref: 'Materia',
+      required: true,
     },
     simulacro_area: {
       type: Schema.Types.ObjectId,
       ref: 'SimulacroArea',
+      required: true,
     },
     preguntas: [
       {

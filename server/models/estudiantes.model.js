@@ -4,11 +4,22 @@ const { Schema, model } = mongoose
 
 const estudiantesSchema = new Schema(
   {
-    rude: String,
-    codigo_banco: String,
+    rude: {
+      type: String,
+      uppercase: true,
+      trim: true,
+      unique: true,
+    },
+    codigo_banco: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',
+      unique: true,
+      required: true,
     },
   },
   {

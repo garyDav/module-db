@@ -4,9 +4,25 @@ const { Schema, model } = mongoose
 
 const materiaSchema = new Schema(
   {
-    nombre: String,
-    sigla: String,
-    estado: String,
+    nombre: {
+      type: String,
+      uppercase: true,
+      trim: true,
+      unique: true,
+      required: true,
+    },
+    sigla: {
+      type: String,
+      uppercase: true,
+      trim: true,
+      required: true,
+    },
+    estado: {
+      type: String,
+      uppercase: true,
+      trim: true,
+      default: 'ENABLED',
+    },
   },
   {
     versionKey: false,

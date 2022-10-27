@@ -4,12 +4,13 @@ const { Schema, model } = mongoose
 
 const administrativosSchema = new Schema(
   {
-    descripcion: String,
+    detalle: String,
     telefono_interno: Number,
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',
       unique: true,
+      required: true,
     },
   },
   {

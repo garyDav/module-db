@@ -41,6 +41,9 @@ const createAdmin = async () => {
         username: 'admin',
         email: 'admin@gmail.com',
         password: await bcrypt.hash('admin', 10),
+        nombre: 'Don Bosco',
+        carnet: '10000000',
+        extension: 'CH',
         roles: roles.map(role => role._id),
       })
       log(chalk.blue('Admin User Created!'))

@@ -9,10 +9,12 @@ const simulacroMateriaSchema = new Schema(
     estudiante: {
       type: Schema.Types.ObjectId,
       ref: 'Estudiantes',
+      required: true,
     },
     simulacro_area: {
       type: Schema.Types.ObjectId,
       ref: 'SimulacroArea',
+      required: true,
     },
   },
   {

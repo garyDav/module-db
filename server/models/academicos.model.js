@@ -4,11 +4,22 @@ const { Schema, model } = mongoose
 
 const academicosSchema = new Schema(
   {
-    item: String,
-    direccion: String,
+    item: {
+      type: String,
+      uppercase: true,
+      trim: true,
+      unique: true,
+    },
+    direccion: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',
+      unique: true,
+      required: true,
     },
     materias: [
       {

@@ -29,13 +29,11 @@ const userSchema = new Schema(
       type: String,
       uppercase: true,
       trim: true,
-      required: true,
     },
     apmaterno: {
       type: String,
       uppercase: true,
       trim: true,
-      required: true,
     },
     carnet: {
       type: Number,

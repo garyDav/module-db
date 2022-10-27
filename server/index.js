@@ -40,3 +40,5 @@ export default MongoDB
 export { ROLES } from './models/role.model.js'
 export { default as RoleServiceDB } from './services/role.service.js'
 export { default as UserServiceDB } from './services/user.service.js'
+export { default as AdministrativosServiceDB } from './services/administrativos.service.js'
+

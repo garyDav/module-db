@@ -20,10 +20,12 @@ const bancoPreguntasSchema = new Schema(
     materia: {
       type: Schema.Types.ObjectId,
       ref: 'Materia',
+      required: true,
     },
     academico: {
       type: Schema.Types.ObjectId,
       ref: 'Academicos',
+      required: true,
     },
   },
   {

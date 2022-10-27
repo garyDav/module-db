@@ -6,7 +6,10 @@ const simulacroAreaSchema = new Schema(
   {
     nombre: String,
     descripcion: String,
-    porcentaje_area: Number,
+    porcentaje_area: {
+      type: Number,
+      required: true,
+    },
     simulacro_examen: [
       {
         id: {
