@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const { Schema, model } = mongoose
 
-const materiaSchema = new Schema(
+const materiasSchema = new Schema(
   {
     nombre: {
       type: String,
@@ -29,4 +29,4 @@ const materiaSchema = new Schema(
   }
 )
 
-export default model('Materia', materiaSchema)
+export default model('Materias', materiasSchema)

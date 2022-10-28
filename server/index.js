@@ -41,4 +41,6 @@ export { ROLES } from './models/role.model.js'
 export { default as RoleServiceDB } from './services/role.service.js'
 export { default as UserServiceDB } from './services/user.service.js'
 export { default as AdministrativosServiceDB } from './services/administrativos.service.js'
-
+export { default as EstudiantesServiceDB } from './services/estudiantes.service.js'
+export { default as AcademicosServiceDB } from './services/academicos.service.js'
+export { default as MateriasServiceDB } from './services/materias.service.js'

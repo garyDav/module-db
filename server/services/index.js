@@ -1,3 +1,6 @@
 export { default as UserServiceDB } from './user.service.js'
 export { default as RoleServiceDB } from './role.service.js'
 export { default as AdministrativosServiceDB } from './administrativos.service.js'
+export { default as EstudiantesServiceDB } from './estudiantes.service.js'
+export { default as AcademicosServiceDB } from './academicos.service.js'
+export { default as MateriasServiceDB } from './materias.service.js'

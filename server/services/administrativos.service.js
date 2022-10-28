@@ -7,19 +7,25 @@ class AdministrativosServiceDB {
   findAll() {
     debug('Find All Administrativos\n')
 
-    return AdministrativosModel.find().populate('user')
+    return AdministrativosModel.find().populate('user', {
+      password: 0,
+      roles: 0,
+    })
   }
 
-  findById( id ) {
+  findById(id) {
     debug('Find By Id Administrativo\n')
 
-    return AdministrativosModel.findById(id).populate('user')
+    return AdministrativosModel.findById(id).populate('user', {
+      password: 0,
+      roles: 0,
+    })
   }
 
-  deleteById( _id ) {
+  deleteById(_id) {
     debug('Delete By Id Administrativo\n')
 
-    return AdministrativosModel.deleteOne({_id})
+    return AdministrativosModel.deleteOne({ _id })
   }
 
   create(data) {
