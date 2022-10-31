@@ -4,3 +4,4 @@ export { default as AdministrativosServiceDB } from './administrativos.service.j
 export { default as EstudiantesServiceDB } from './estudiantes.service.js'
 export { default as AcademicosServiceDB } from './academicos.service.js'
 export { default as MateriasServiceDB } from './materias.service.js'
+export { default as BancoPreguntasServiceDB } from './banco_preguntas.service.js'
