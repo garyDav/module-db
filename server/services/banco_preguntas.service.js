@@ -28,6 +28,15 @@ class BancoPreguntasServiceDB {
     return BancoPreguntasModel.deleteOne({ _id })
   }
 
+  updateById(_id, data) {
+    debug('Delete By Id BancoPregunta\n')
+
+    return BancoPreguntasModel.updateOne(
+      { _id },
+      { $push: { preguntas: data } }
+    )
+  }
+
   create(data) {
     debug('Creating BancoPregunta\n')
 
