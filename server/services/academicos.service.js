@@ -13,6 +13,12 @@ class AcademicosServiceDB {
     })
   }
 
+  findByUserId(id) {
+    debug('Find Academico By User Id\n')
+
+    return AcademicosModel.findOne({ user: id })
+  }
+
   findById(id) {
     debug('Find By Id Academico\n')
 

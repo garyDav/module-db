@@ -5,6 +5,12 @@ import { UserModel, RoleModel } from '../models/index.js'
 const debug = Debug('module-db:User')
 
 class UserServiceDB {
+  findAll() {
+    debug('Find All Usuarios\n')
+
+    return UserModel.find()
+  }
+
   async register(user, roles) {
     if (roles.length > 0) debug('Register User with Roles\n')
     else debug('Register User none Roles\n')

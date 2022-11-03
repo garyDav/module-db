@@ -16,6 +16,12 @@ class BancoPreguntasServiceDB {
     return BancoPreguntasModel.findById(id)
   }
 
+  findByAcademicoId(id) {
+    debug('Find BancoPregunta By Academico Id \n')
+
+    return BancoPreguntasModel.findOne({ academico: id })
+  }
+
   deleteById(_id) {
     debug('Delete By Id BancoPregunta\n')
 
