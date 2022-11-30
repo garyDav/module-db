@@ -40,7 +40,7 @@ const createAdmin = async () => {
       await UserModel.create({
         username: 'admin',
         email: 'admin@gmail.com',
-        password: await bcrypt.hash('admin', 10),
+        password: await bcrypt.hash('Admin.22', 10),
         nombre: 'Don Bosco',
         carnet: '10000000',
         extension: 'CH',
