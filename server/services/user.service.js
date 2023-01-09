@@ -64,6 +64,12 @@ class UserServiceDB {
     return UserModel.findOne(query).populate('roles')
   }
 
+  deleteById(_id) {
+    debug('Delete By Id User\n')
+
+    return UserModel.deleteOne({ _id })
+  }
+
   async encryptPassword(password) {
     debug('encryptPassword\n')
 
