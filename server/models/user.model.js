@@ -36,6 +36,7 @@ const userSchema = new Schema(
       type: String,
       uppercase: true,
       trim: true,
+      required: true,
     },
     carnet: {
       type: Number,
@@ -46,32 +47,43 @@ const userSchema = new Schema(
     },
     extension: {
       type: String,
-      enum: ['CH', 'LP', 'CB', 'OR', 'PT', 'TJ', 'SC', 'BE', 'PD'],
+      enum: ['CH', 'TJ', 'PT', 'LP', 'OR', 'CB', 'SC', 'BN', 'PD'],
       uppercase: true,
       required: true,
     },
     fecha_nacimiento: {
       type: Date,
+      required: true,
     },
     img: {
       type: String,
     },
     estado: {
       type: String,
+      uppercase: true,
+      trim: true,
+      default: 'DESCONECTADO',
     },
     genero: {
       type: String,
+      enum: ['femenino', 'masculino', 'otro'],
+      required: true,
     },
     celular: {
       type: Number,
+      required: true,
     },
     roles: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Role',
+        required: true,
       },
     ],
-    niveles: [String],
+    niveles: {
+      type: [String],
+      required: true,
+    },
   },
   {
     timestamps: true,

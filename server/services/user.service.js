@@ -47,13 +47,20 @@ class UserServiceDB {
     debug('Find By Id User\n')
 
     const columns = { password: 0 }
-    return UserModel.findById(id, columns)
+    return UserModel.findById(id, columns).populate('roles')
   }
 
   findByUsername(username) {
     debug('Find By Username User\n')
 
     const query = { username }
+    return UserModel.findOne(query).populate('roles')
+  }
+
+  findByCI(carnet) {
+    debug('Find By CI User\n')
+
+    const query = { carnet }
     return UserModel.findOne(query).populate('roles')
   }
 
