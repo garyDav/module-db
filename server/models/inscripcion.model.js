@@ -559,6 +559,33 @@ const inscripcionSchema = new Schema(
       type: Date,
     },
 
+    // Form 7
+    contrato_firma: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
+    contrato_nit: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
+    contrato_nombre: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
+    contrato_correo: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
+    pandemia_vacunas: {
+      type: String,
+      uppercase: true,
+      trim: true,
+    },
+
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',

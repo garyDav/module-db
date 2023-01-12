@@ -14,7 +14,8 @@
     "start:setup": "NODE_ENV=development DEBUG=module-db*,db:* nodemon setup.js",
     "start:example": "NODE_ENV=development DEBUG=module-db*,db:* nodemon server/examples/index.js",
     "start:serverw": "SET NODE_ENV=development & DEBUG=module-db*,db:* & nodemon server/index.js",
-    "start:prod": "NODE_ENV=production DEBUG=module-db*,db:* node server.js"
+    "start:prod": "NODE_ENV=production DEBUG=module-db*,db:* node server.js",
+    "start:xlsx": "node server/libs/xlsxToDB.js"
   },
   "keywords": [
     "mongodb",
@@ -32,7 +33,8 @@
     "dotenv": "^16.0.3",
     "inquirer": "^9.1.4",
     "minimist": "^1.2.7",
-    "mongoose": "^6.6.5"
+    "mongoose": "^6.6.5",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
