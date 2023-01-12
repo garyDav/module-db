@@ -45,3 +45,4 @@ export { default as EstudiantesServiceDB } from './services/estudiantes.service.
 export { default as AcademicosServiceDB } from './services/academicos.service.js'
 export { default as MateriasServiceDB } from './services/materias.service.js'
 export { default as BancoPreguntasServiceDB } from './services/banco_preguntas.service.js'
+export { default as InscripcionServiceDB } from './services/inscripcion.service.js'

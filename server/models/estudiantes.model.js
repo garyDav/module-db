@@ -9,11 +9,13 @@ const estudiantesSchema = new Schema(
       uppercase: true,
       trim: true,
       unique: true,
+      required: true,
     },
     codigo_banco: {
-      type: String,
-      uppercase: true,
+      type: Number,
       trim: true,
+      unique: true,
+      required: true,
     },
     user: {
       type: Schema.Types.ObjectId,

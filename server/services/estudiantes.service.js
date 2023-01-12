@@ -22,6 +22,12 @@ class EstudiantesServiceDB {
     })
   }
 
+  findByUserId(user) {
+    debug('Find By Id User\n')
+
+    return EstudiantesModel.findOne({ user }).populate('user')
+  }
+
   deleteById(_id) {
     debug('Delete By Id Estudiante\n')
 
